@@ -537,7 +537,7 @@
 
   {#if $slideshowState === SlideshowState.None && showNavigation && !assetViewerManager.isShowEditor && !assetViewerManager.isFaceEditMode && previousAsset}
     <div class="col-span-1 col-start-1 row-span-full row-start-1 my-auto justify-self-start">
-      <PreviousAssetAction onPreviousAsset={() => navigateAsset('previous')} />
+      <PreviousAssetAction onPreviousAsset={() => navigateAsset('previous')} {onSwipe} />
     </div>
   {/if}
 
@@ -615,7 +615,7 @@
 
   {#if $slideshowState === SlideshowState.None && showNavigation && !assetViewerManager.isShowEditor && !assetViewerManager.isFaceEditMode && nextAsset}
     <div class="col-span-1 col-start-4 row-span-full row-start-1 my-auto justify-self-end">
-      <NextAssetAction onNextAsset={() => navigateAsset('next')} />
+      <NextAssetAction onNextAsset={() => navigateAsset('next')} {onSwipe} />
     </div>
   {/if}
 
